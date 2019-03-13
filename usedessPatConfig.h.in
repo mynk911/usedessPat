@@ -1,0 +1,12 @@
+#define usedessPat_VERSION_MAJOR @usedessPat_VERSION_MAJOR@
+#define usedessPat_VERSION_MINOR @usedessPat_VERSION_MINOR@
+#cmakedefine GOF_FOUND
+#cmakedefine HAVE_EXP
+#cmakedefine HAVE_LOG
+#cmakedefine GFG_FOUND
+#cmakedefine LCTHW_FOUND
+#cmakedefine CS180_FOUND
+#cmakedefine CONCUR_FOUND
+#cmakedefine MCPP_FOUND
+#cmakedefine LIN_FOUND
+#cmakedefine WIN_FOUND
