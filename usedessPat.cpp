@@ -112,7 +112,9 @@ int main (int argc, char *argv[])
       //get array entries
       for (int i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
-      subarry_with_given_sum(A, n, s);
+      int res[2];
+      subarry_with_given_sum(A, n, s, res, 2);
+      printf("%d %d\n", res[0], res[1]);
   }
   printf("sort 0 1 2 : \n");
   scn = scanf("%d", &t);
