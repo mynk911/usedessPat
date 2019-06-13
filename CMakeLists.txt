@@ -19,13 +19,21 @@ find_package(LIN)
 
 add_executable(usedessPat usedessPat.cpp)
 target_link_libraries(usedessPat GFG::gfg
-                                 GOF::gof
-                                 CS180::cs180
-                                 LCTHW::lcthw
-                                 CONCUR::concur
-                                 MCPP::mcpp
-                                 WIN::win
-                                 LIN::lin)
+				 GOF::gof
+				 CS180::cs180
+				 LCTHW::lcthw
+				 CONCUR::concur
+				 MCPP::mcpp)
+
+if(WIN_FOUND)
+  target_link_libraries(usedessPat WIN::win)
+endif(WIN_FOUND)
+
+if(LIN_FOUND)
+  target_link_libraries(usedessPat LIN::lin)
+endif(LIN_FOUND)
+
+
 
 target_include_directories(usedessPat
     #PUBLIC
@@ -45,4 +53,3 @@ configure_file (
  "${PROJECT_BINARY_DIR}/sampleInput.txt"
  COPYONLY
 )
-
