@@ -67,21 +67,21 @@ int main (int argc, char *argv[])
 #endif
 
 #ifdef CS180_FOUND
-    {
-        std::cout << "stable matching algo :" << std::endl;
-        //cs180::stable_matching();
-        cs180::pq::heap<int> pq;
-        pq.insert(5, 1);
-        pq.insert(4, 8);
-        pq.insert(2, 2);
-        pq.insert(1, 4);
-        pq.insert(3, 3);
-        pq.insert(7, 5);
-        pq.changeKey(0, 25);
-        for(int i = 0;i < 6;i++)
-            std::cout << pq.extractmin() << " ";
-        std::cout << "\n";
-    }
+//    {
+//        std::cout << "stable matching algo :" << std::endl;
+//        //cs180::stable_matching();
+//        cs180::pq::heap<int> pq;
+//        pq.insert(5, 1);
+//        pq.insert(4, 8);
+//        pq.insert(2, 2);
+//        pq.insert(1, 4);
+//        pq.insert(3, 3);
+//        pq.insert(7, 5);
+//        pq.changeKey(0, 25);
+//        for(int i = 0;i < 6;i++)
+//            std::cout << pq.extractmin() << " ";
+//        std::cout << "\n";
+//    }
 #endif
 #ifdef GFG_FOUND
   //get number of test cases
@@ -404,29 +404,29 @@ int main (int argc, char *argv[])
 
 #ifdef LCTHW_FOUND
   printf("Exercise 1:\n");
-  ex1(argc,argv);
+  ex1(stdout);
   printf("Exercise 3:\n");
-  ex3(argc, argv);
+  ex3(stdout);
   printf("Exercise 7:\n");
-  ex7(argc, argv);
+  ex7(stdout);
   printf("Exercise 8:\n");
-  ex8(argc, argv);
+  ex8(argc, argv, stdout);
   printf("Exercise 9:\n");
-  ex9(argc, argv);
+  ex9(stdout);
   printf("Exercise 10:\n");
-  ex10(argc, argv);
+  ex10(argc, argv, stdout);
   printf("Exercise 11:\n");
-  ex11(argc, argv);
+  ex11(stdout);
   printf("Exercise 12:\n");
-  ex12(argc, argv);
+  ex12(stdout);
   printf("Exercise 13:\n");
-  ex13(argc, argv);
+  ex13(argc, argv, stdout);
   printf("Exercise 14:\n");
-  ex14(argc, argv);
+  ex14(argc, argv, stdout);
   printf("Exercise 15:\n");
-  ex15(argc, argv);
-  printf("Exercise 16:\n");
-  ex16(argc, argv);
+  ex15(stdout);
+  //printf("Exercise 16:\n");
+  //ex16(argc, argv);
   printf("Exercise 17:\n");
   //ex17(argc, argv);
   printf("Exercise 18:\n");
@@ -444,7 +444,7 @@ int main (int argc, char *argv[])
 #endif
 
 #ifdef CONCUR_FOUND
-    execAll();
+    exec(std::cout);
 #endif
 
 #ifdef MCPP_FOUND
