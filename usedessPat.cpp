@@ -92,7 +92,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%u", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -104,7 +104,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%u", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -116,14 +116,14 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%u", &n);
+      size_t n; scn = scanf("%zu", &n);
       int s; scn = scanf("%d", &s);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
       size_t res[2];
       if(!subarray_with_given_sum(A, n, s, res, 2))
-        printf("%d %d\n", res[0], res[1]);
+        printf("%zu %zu\n", res[0], res[1]);
       else
         printf("-1\n");
   }
@@ -131,7 +131,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%u", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -144,19 +144,19 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%u", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
       size_t res;
       equilibrium_point(A, n, &res);
-      printf("%u\n", res);
+      printf("%zu\n", res);
   }
   printf("maximum sum increasing subsequence : \n");
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%u", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -168,7 +168,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -182,7 +182,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -196,8 +196,8 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
-      size_t k; scn = scanf("%d", &k);
+      size_t n; scn = scanf("%zu", &n);
+      size_t k; scn = scanf("%zu", &k);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -211,8 +211,8 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
-      size_t k; scn = scanf("%d", &k);
+      size_t n; scn = scanf("%zu", &n);
+      size_t k; scn = scanf("%zu", &k);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -225,11 +225,11 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
-      size_t k; scn = scanf("%d", &k);
+      size_t k; scn = scanf("%zu", &k);
       int res;
       kth_smallest_element(A, n, k, &res);
       printf("%d\n", res);
@@ -238,7 +238,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -250,7 +250,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -263,11 +263,11 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
-      size_t m; scn = scanf("%d", &m);
+      size_t m; scn = scanf("%zu", &m);
       int res;
       chocolate_distribution(A, n, m, &res);
       printf("%d\n", res);
@@ -276,14 +276,14 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
       size_t res_size;
       stock_buy_and_sell(A, n, res_arr, &res_size);
       for (size_t i = 0; i < res_size; i++)
-          printf("%u ", res_arr[i]);
+          printf("%zu", res_arr[i]);
       printf("\n");
 
   }
@@ -291,7 +291,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -303,7 +303,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -316,7 +316,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -328,8 +328,8 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t k; scn = scanf("%d", &k);
-      size_t n; scn = scanf("%d", &n);
+      size_t k; scn = scanf("%zu", &k);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -343,8 +343,8 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
-      size_t m; scn = scanf("%d", &m);
+      size_t n; scn = scanf("%zu", &n);
+      size_t m; scn = scanf("%zu", &m);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%d", &A[i]);
@@ -360,8 +360,8 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t m; scn = scanf("%d", &m);
-      size_t n; scn = scanf("%d", &n);
+      size_t m; scn = scanf("%zu", &m);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < m; i++)
           for(size_t j = 0; j < n; j++)
@@ -376,7 +376,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
               scn = scanf("%d", &A[i]);
@@ -391,7 +391,7 @@ int main (int argc, char *argv[])
   scn = scanf("%d", &t);
   while (t--) {
       //get the size of array
-      size_t n; scn = scanf("%d", &n);
+      size_t n; scn = scanf("%zu", &n);
       //get array entries
       for (size_t i = 0; i < n; i++)
           scn = scanf("%s", As[i].a);
