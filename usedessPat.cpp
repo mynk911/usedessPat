@@ -54,7 +54,7 @@ int main (int argc, char *argv[])
 #ifdef GOF_FOUND
     {
         auto mg = std::make_shared<gof::creational::MazeGame>();
-        mg->CreateMaze(gof::creational::Mazefactory::Instance());
+        mg->CreateMaze(gof::creational::MazeFactory::Instance());
 
         auto sp = std::make_unique<gof::structural::Shape>(1,2,4,5);
         gof::structural::Point a(0,0), b(0,0);
@@ -448,7 +448,7 @@ int main (int argc, char *argv[])
 #endif
 
 #ifdef MCPP_FOUND
-    test tt;
+    mcpp_test tt;
     tt();
 #endif
 
