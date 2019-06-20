@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <iostream>
+#include <sstream>
 #include "usedessPatConfig.h"
 #include "dbg.h"
 
@@ -53,35 +54,37 @@ int main (int argc, char *argv[])
               usedessPat_VERSION_MINOR);
 #ifdef GOF_FOUND
     {
-        auto mg = std::make_shared<gof::creational::MazeGame>();
-        mg->CreateMaze(gof::creational::MazeFactory::Instance());
+        auto mg = std::make_shared<gof::MazeGame>();
+        mg->CreateMaze(gof::MazeFactory::Instance());
 
-        auto sp = std::make_unique<gof::structural::Shape>(1,2,4,5);
-        gof::structural::Point a(0,0), b(0,0);
+        auto sp = std::make_unique<gof::Shape>(1,2,4,5);
+        gof::Point a(0,0), b(0,0);
         sp->BoundingBox(&a,&b);
-        debug("sp a:%f %f,b:%f %f",a.getX(),a.getY(), b.getX(), b.getY());
         auto mp = sp->CreateManipulator();
-        auto tv = std::make_unique<gof::structural::Textview>(1,3,4,7);
-        auto tsp = std::make_unique<gof::structural::TextShape>(1,2,4,5);
+        auto tv = std::make_unique<gof::TextView>(1,3,4,7);
+        auto tsp = std::make_unique<gof::TextShape>(1,2,4,5);
     }
 #endif
 
 #ifdef CS180_FOUND
-//    {
-//        std::cout << "stable matching algo :" << std::endl;
-//        //cs180::stable_matching();
-//        cs180::pq::heap<int> pq;
-//        pq.insert(5, 1);
-//        pq.insert(4, 8);
-//        pq.insert(2, 2);
-//        pq.insert(1, 4);
-//        pq.insert(3, 3);
-//        pq.insert(7, 5);
-//        pq.changeKey(0, 25);
-//        for(int i = 0;i < 6;i++)
-//            std::cout << pq.extractmin() << " ";
-//        std::cout << "\n";
-//    }
+    {
+        std::cout << "stable matching algo :" << std::endl;
+        std::stringstream in, out;
+        in << "2 m1 m2 w1 w2 m1 w2 w1 m2 w1 w2 w1 m1 m2 w2 m1 m2\0";
+        cs180::StableMatching sm(in);
+        std::cout << out.str();
+        cs180::pq::heap<int> pq;
+        pq.insert(5, 1);
+        pq.insert(4, 8);
+        pq.insert(2, 2);
+        pq.insert(1, 4);
+        pq.insert(3, 3);
+        pq.insert(7, 5);
+        pq.changeKey(0, 25);
+        for(int i = 0;i < 6;i++)
+            std::cout << pq.extractmin() << " ";
+        std::cout << "\n";
+    }
 #endif
 #ifdef GFG_FOUND
   //get number of test cases
@@ -463,4 +466,3 @@ int main (int argc, char *argv[])
 #endif
   return 0;
 }
-
